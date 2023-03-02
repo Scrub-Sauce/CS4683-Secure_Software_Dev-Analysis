@@ -1,0 +1,17 @@
+public interface HDMLAdapter implements VideoPlug {
+
+    // Create local instance of the adaptee
+    HDMIPlug HDMIInput = new HDMIPlug();
+
+    // Construct our Adapter
+    public HDMIAdapter (HDMIPlug HDMIInput){
+        this.HDMIInput = HDMIInput;
+    }
+
+    // Handle Request
+    // I'm not certain if I need the width and Height as parameters to make it uniform with the Video Plug interface.
+    // HDMIPlug define's its own dimensions so I'm assuming it isn't necessary as parameters.
+    public void display(){
+        this.HDMIInput.digitalDisplay();
+    }
+}

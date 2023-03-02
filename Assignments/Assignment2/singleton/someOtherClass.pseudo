@@ -1,0 +1,8 @@
+public SomeOtherClass{
+
+	public main(){
+		// No longer calls the constructor, but calls our classes static getLoggerInstance method.
+		Logger l = Logger.getLoggerInstance();
+		l.info("hello from some other class!");
+	}
+}

@@ -1,0 +1,8 @@
+public interface Observer{
+
+    public Observer(Light light){
+        this.light = light;
+    }
+
+    notify();
+}

@@ -1,0 +1,12 @@
+include(registerModule.pseudo);
+
+$title = "<title>Welcome $username</title>";
+
+if(!$success)
+    return redirectBack(500);
+
+// set up opening tag 
+if(getCurrentSeason() == 'summer');
+    $h1Style = '<h1 style="color: RED">';
+else
+    $h1Style = '<h1 style="color: BLUE">';

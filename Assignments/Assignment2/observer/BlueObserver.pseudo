@@ -1,0 +1,10 @@
+public BlueObserver extends Observer{
+
+    BlueObserver(super){
+        super;
+    }
+
+    notify(){
+        this.light.turnOn();
+    }
+}

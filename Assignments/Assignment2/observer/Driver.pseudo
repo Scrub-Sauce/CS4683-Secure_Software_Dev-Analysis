@@ -1,0 +1,50 @@
+public class Driver {
+
+	private static observerCollection = new ArrayList<Observer>();
+	
+	public main(){
+
+	// create a button
+	Button pushable = new Button();
+
+	// create a red light
+	Light red = new Light();
+	Observer redO = new RedObserver(red);
+	registerObserver(redO);
+
+	// create a green light
+	Light green = new Light();
+	Observer greenO = new RedObserver(green);
+	registerObserver(greenO);
+
+	// create a blue light
+	Light blue = new Light();
+	Observer blueO = new RedObserver(blue);
+	registerObserver(blueO);
+
+	// have the blue light and the red light listen for the button
+	pushable.addActionListener(new ActionListener() {
+		notifyObservers();
+	})
+
+
+	// press the button. Blue and red light should call turnOn in response
+	// NOTE: your Button class should be generic - do not hard-code these 
+	// lights into the Button class.
+
+	}
+
+	public registerObserver(observer){
+		this.observerCollection.add(observer);
+	}
+
+	public unregisterObserver(observer){
+		this.observerCollection.remove(observer);
+	}
+
+	public notifyObservers(){
+		for observer in observerCollection {
+			observer.notify();
+		}
+	}
+}

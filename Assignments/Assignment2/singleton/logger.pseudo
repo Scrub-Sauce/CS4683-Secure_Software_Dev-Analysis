@@ -1,0 +1,24 @@
+public class Logger {
+	private String log;
+	// Constructor
+	// Change constructor to private
+	private Logger(){
+	}
+
+	// Initialize the instance variable
+	private static loggerIstance = null;
+
+	// Get the instance of our active logger and if it doesn't exist, creates a new one.
+	public static getLoggerInstance() {
+		if(loggerInstance == null)
+			loggerInstance = new Logger();
+
+		return loggerInstance
+	}
+
+
+	// Log something
+	public info(String information){
+		this.log.append(information);
+	}
+}

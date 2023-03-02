@@ -1,0 +1,12 @@
+include(registerController.pseudo);
+
+echo "<html>
+            <head>
+                $title
+            </head>
+            <body>
+                $h1Style
+                    Welcome $username
+                </h1>
+            </body>
+        </html>";

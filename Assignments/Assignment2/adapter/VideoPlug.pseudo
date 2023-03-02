@@ -1,0 +1,4 @@
+public interface VideoPlug {
+
+	public void display(int width, int height);
+}
